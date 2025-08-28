@@ -545,7 +545,6 @@ export const BotBubble = (props: Props) => {
               <Show when={props.message.dateTime}>
                 <div class="text-sm text-gray-500 ml-2" dir="rtl">
                   {formatDateTime(props.message.dateTime, true, true)}
-                  {/*{ props.message.dateTime }*/}
                 </div>
               </Show>
             </div>
