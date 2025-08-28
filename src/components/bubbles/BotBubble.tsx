@@ -346,7 +346,7 @@ export const BotBubble = (props: Props) => {
   };
 
   const formatDateTime = (dateTimeString: string | undefined, showDate: boolean | undefined, showTime: boolean | undefined) => {
-    if (!dateTimeString) return '';
+    if (!dateTimeString) return 'a';
 
     try {
       const date = new Date(dateTimeString);
@@ -354,13 +354,13 @@ export const BotBubble = (props: Props) => {
       // Check if the date is valid
       if (isNaN(date.getTime())) {
         console.error('Invalid ISO date string:', dateTimeString);
-        return '';
+        return 'b';
       }
 
       let formatted = '';
 
       if (showDate) {
-        const dateFormatter = new Intl.DateTimeFormat('en-US', {
+        const dateFormatter = new Intl.DateTimeFormat('fa', {
           year: 'numeric',
           month: 'short',
           day: 'numeric',
@@ -371,7 +371,7 @@ export const BotBubble = (props: Props) => {
       }
 
       if (showTime) {
-        const timeFormatter = new Intl.DateTimeFormat('en-US', {
+        const timeFormatter = new Intl.DateTimeFormat('fa', {
           hour: 'numeric',
           minute: '2-digit',
           hour12: true,
@@ -384,7 +384,7 @@ export const BotBubble = (props: Props) => {
       return formatted;
     } catch (error) {
       console.error('Error formatting date:', error);
-      return '';
+      return 'c';
     }
   };
 
@@ -543,9 +543,9 @@ export const BotBubble = (props: Props) => {
                 />
               ) : null}
               <Show when={props.message.dateTime}>
-                <div class="text-sm text-gray-500 ml-2">
-                  {/*{formatDateTime(props.message.dateTime, props?.dateTimeToggle?.date, props?.dateTimeToggle?.time)}*/}
-                  {props.message.dateTime.toLocaleString("fa")}
+                <div class="text-sm text-gray-500 ml-2" dir="rtl">
+                  {formatDateTime(props.message.dateTime, true, true)}
+                  {/*{ props.message.dateTime }*/}
                 </div>
               </Show>
             </div>
