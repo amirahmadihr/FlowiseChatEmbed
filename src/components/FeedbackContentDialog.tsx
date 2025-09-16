@@ -30,7 +30,7 @@ const FeedbackContentDialog = (props: FeedbackContentDialogProps) => {
 
   return (
     <>
-      <div class="flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[1002] outline-none focus:outline-none justify-center items-center">
+      <div class="flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[1002] outline-none focus:outline-none justify-center items-center" dir="rtl">
         <div class="relative w-full my-6 max-w-3xl mx-4">
           <div
             class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none"
@@ -45,9 +45,11 @@ const FeedbackContentDialog = (props: FeedbackContentDialogProps) => {
                 border: '1px solid #eeeeee',
               }}
             >
-              <span class="whitespace-pre-wrap font-semibold max-w-full">Provide additional feedback</span>
+              <span class="whitespace-pre-wrap font-semibold max-w-full">
+                ثبت بازخورد
+              </span>
               <button
-                class="p-1 ml-auto bg-transparent border-0 text-black float-right text-xl leading-none font-semibold outline-none focus:outline-none"
+                class="p-1 mr-auto bg-transparent border-0 text-black float-left text-xl leading-none font-semibold outline-none focus:outline-none"
                 type="button"
                 onClick={onClose}
               >
@@ -80,7 +82,7 @@ const FeedbackContentDialog = (props: FeedbackContentDialogProps) => {
                   border: '1px solid #eeeeee',
                   color: props.textColor ?? defaultTextColor,
                 }}
-                placeholder="What do you think of the response?"
+                placeholder="نظر شما در مورد پاسخ چیست؟"
                 value={inputValue()}
               />
             </div>
@@ -90,7 +92,7 @@ const FeedbackContentDialog = (props: FeedbackContentDialogProps) => {
                 type="button"
                 onClick={submit}
               >
-                Submit Feedback
+                ثبت و ارسال نظر
               </button>
             </div>
           </div>
