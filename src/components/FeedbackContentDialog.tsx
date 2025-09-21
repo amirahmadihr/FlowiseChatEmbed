@@ -45,11 +45,8 @@ const FeedbackContentDialog = (props: FeedbackContentDialogProps) => {
                 border: '1px solid #eeeeee',
               }}
             >
-              <span class="whitespace-pre-wrap font-semibold max-w-full">
-                ثبت بازخورد
-              </span>
               <button
-                class="p-1 mr-auto bg-transparent border-0 text-black float-left text-xl leading-none font-semibold outline-none focus:outline-none"
+                class="p-1 bg-transparent border-0 text-black float-left text-xl leading-none font-semibold outline-none focus:outline-none"
                 type="button"
                 onClick={onClose}
               >
@@ -71,6 +68,9 @@ const FeedbackContentDialog = (props: FeedbackContentDialogProps) => {
                   </svg>
                 </span>
               </button>
+              <h2 className="whitespace-pre-wrap font-semibold max-w-full">
+                ثبت بازخورد
+              </h2>
             </div>
             <div class="relative p-6 flex-auto">
               <textarea
