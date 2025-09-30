@@ -101,6 +101,7 @@ export type DisclaimerPopUpTheme = {
     title?: string;
     message?: string;
     textColor?: string;
+    image?: string;
     buttonColor?: string;
     buttonTextColor?: string;
     buttonText?: string;

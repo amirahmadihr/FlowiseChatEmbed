@@ -139,6 +139,7 @@ You can also customize chatbot with different configuration
         title: 'Disclaimer',
         message: 'By using this chatbot, you agree to the <a target="_blank" href="https://flowiseai.com/terms">Terms & Condition</a>',
         textColor: 'black',
+        image: '',
         buttonColor: '#3b82f6',
         buttonText: 'Start Chatting',
         buttonTextColor: 'white',

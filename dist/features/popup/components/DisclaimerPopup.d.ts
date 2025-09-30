@@ -11,6 +11,7 @@ export type DisclaimerPopupProps = {
     backgroundColor?: string;
     buttonColor?: string;
     textColor?: string;
+    image?: string;
     buttonTextColor?: string;
     denyButtonBgColor?: string;
 };

@@ -13,6 +13,7 @@ export type DisclaimerPopupProps = {
   backgroundColor?: string;
   buttonColor?: string;
   textColor?: string;
+  image?: string;
   buttonTextColor?: string;
   denyButtonBgColor?: string;
 };
@@ -26,6 +27,7 @@ export const DisclaimerPopup = (props: DisclaimerPopupProps) => {
     'title',
     'message',
     'textColor',
+    'image',
     'buttonColor',
     'buttonText',
     'denyButtonText',
@@ -53,6 +55,15 @@ export const DisclaimerPopup = (props: DisclaimerPopupProps) => {
           class="p-10 rounded-lg shadow-lg max-w-md w-full text-center mx-4 font-sans"
           style={{ background: popupProps.backgroundColor || 'white', color: popupProps.textColor || 'black' }}
         >
+
+          {popupProps.image && (
+          <img
+            src={popupProps.image}
+            alt="disclaimer image"
+            width="80%"
+          />
+          )}
+
           <h2 class="text-2xl font-semibold mb-4 flex justify-center items-center">{popupProps.title ?? 'Disclaimer'}</h2>
 
           <p
