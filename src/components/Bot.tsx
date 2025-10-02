@@ -2028,6 +2028,7 @@ export const Bot = (botProps: BotProps & { class?: string }) => {
           denyButtonText={props.disclaimer?.denyButtonText}
           onDeny={props.closeBot}
           isFullPage={props.isFullPage}
+          image={props.disclaimer?.image}
         />
       )}
 
